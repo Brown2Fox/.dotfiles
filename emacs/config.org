@@ -445,15 +445,11 @@ Org-tempo is not a separate package but a module within org that can be enabled.
 
 ** Smooth Scrolling
 
+Not working :(
+
 #+begin_src emacs-lisp
-(use-package pixel-scroll
-  :straight nil
-  :bind (([remap scroll-up-command] . pixel-scroll-interpolate-down)
-         ([remap scroll-down-command] . pixel-scroll-interpolate-up))
-  :custom
-  (pixel-scroll-precision-interpolate-page t)
-  :init
-  (pixel-scroll-precision-mode 1))
+(pixel-scroll-mode -1)
+(pixel-scroll-precision-mode 1)
 #+end_src
 
 ** Beacon Mode
@@ -593,7 +589,7 @@ Display the actual color as a background for any hex color value (ex. #BBFFBB). 
 (defun kill-other-buffers ()
   "Kill all other buffers."
   (interactive)
-  (mapc 'kill-current-buffer) (buffer-list))
+  (mapc #'(lambda (buf) (if (not (equal buf (current-buffer))) (kill-buffer buf))) (buffer-list)))
 
 ;;; Move-Text
 (use-package move-text
