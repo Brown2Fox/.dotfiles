@@ -12,6 +12,14 @@
 -- Then, because we use the `opts` key (recommended), the configuration runs
 -- after the plugin has been loaded as `require(MODULE).setup(opts)`.
 
+local function get_mode(modeStr)
+  local res = {}
+
+  for c in modeStr:gmatch '.' do
+    table.insert(res, c)
+  end
+end
+
 return {
   -- Useful plugin to show you pending keybinds.
   'folke/which-key.nvim',
@@ -21,7 +29,7 @@ return {
     wk.add {
       { '<leader>', group = 'Leader...' },
       { '<leader>f', group = 'File...' }, -- group
-      { '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find File', mode = 'n' },
+      { '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find File', mode = get_mode 'n' },
       { '<leader>fn', desc = 'New File' },
       { '<leader>f1', hidden = true }, -- hide this keymap
       -- { '<c-w>', hidden = true },
@@ -33,8 +41,15 @@ return {
     -- delay between pressing a key and opening which-key (milliseconds)
     -- this setting is independent of vim.o.timeoutlen
     delay = 0,
+    plugins = {
+      presets = {
+        windows = false, -- default bindings on <c-w>
+      },
+    },
     icons = {
-      -- set icon mappings to true if you have a Nerd Font
+      breadcrumb = '>', -- symbol used in the command line area that shows your active key combo
+      separator = '?', -- symbol used between a key and it's label
+      group = '+ ', -- symbol prepended to a group
       mappings = vim.g.have_nerd_font,
       -- If you are using a Nerd Font: set icons.keys to an empty table which will use the
       -- default which-key.nvim defined Nerd Font icons, otherwise define a string table
