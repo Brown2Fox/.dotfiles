@@ -1,0 +1,15 @@
+[core]
+	editor = nvim 
+[user]
+	name = Andrey Akimov
+	email = a.a.m.incorp@yandex.ru
+[safe]
+	directory = *
+[alias]
+	co = checkout
+	cm = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
