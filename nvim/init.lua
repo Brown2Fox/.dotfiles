@@ -5,22 +5,22 @@ vim.g.maplocalleader = k '<F15>'
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
-vim.o.guifont = 'Lilex Nerd Font:h14'
+vim.o.guifont = "Lilex Nerd Font:h14"
 
-vim.o.clipboard = 'unnamed,unnamedplus'
-vim.g.clipboard = {
-  name = 'Clipboard',
-  copy = {
-    ['+'] = 'clip.exe',
-    ['*'] = 'clip.exe',
-  },
-  paste = {
-    ['+'] = 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-    ['*'] = 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-  },
-  cache_enabled = 0,
-}
+-- vim.o.clipboard = "unnamed,unnamedplus"
 
+-- 	name = "Clipboard",
+-- 	copy = {
+-- 		["+"] = "clip.exe",
+-- 		["*"] = "clip.exe",
+-- 	},
+-- 	paste = {
+-- 		["+"] = 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+-- 		["*"] = 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+-- 	},
+-- 	cache_enabled = 0,
+-- }
+-- end
 -- [[ Setting options ]]
 -- require 'options'
 
