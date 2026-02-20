@@ -467,15 +467,16 @@ And now we can use everything from that file.
   (evil-want-integration nil)
   (evil-want-keybinding nil)
   (evil-vsplit-window-right t)
-  (evil-split-window-below t))
-;; (use-package evil-collection
-;;   :straight t
-;;   :after evil
-;;   :config
-;;   (setq evil-collection-mode-list '(dashboard dired ibuffer))
-;;   (evil-collection-init))
-;; (use-package evil-tutor
-;;   :straight t)
+  (evil-split-window-below t)
+  :config (evil-mode 1))
+
+(use-package evil-collection
+  :after evil
+  :config
+  (setq evil-collection-mode-list '(dashboard dired ibuffer))
+  (evil-collection-init))
+
+(use-package evil-tutor)
 
 (use-package whitespace4r
   :defer
@@ -499,12 +500,6 @@ And now we can use everything from that file.
 
 (use-package general
   :config
-
-  (general-define-key
-   "M-h" 'left-char
-   "M-j" 'evil-next-line
-   "M-k" 'evil-previous-line
-   "M-l" 'right-char)
 
   ;; set up 'F15' (omg) as the global leader key
   (general-create-definer leader-keys
@@ -693,11 +688,11 @@ Also Doom modeline requires nerd icons.
 
 Bottom Bar.
 
-*** DoomModeLine (Disabled)
+*** Doom Mode Line (Disabled)
 
 Laggy but beauty.
 
-#+begin_src emacs-lisp :tangle no
+#+begin_src emacs-lisp 
 (use-package doom-modeline
   :if (display-graphic-p)
   :custom
@@ -707,20 +702,20 @@ Laggy but beauty.
   ;; (doom-modeline-persp-con t)   ;; adds folder icon next to persp name
   (inhibit-compacting-font-caches t) ;; don’t compact font caches during GC - for performance
   :config
-  (doom-modeline-mode 0))
+  (doom-modeline-mode 1))
 
 (use-package nyan-mode
   :if (display-graphic-p)
   :custom
   (nyan-animate-nyancat t)
-  :config (nyan-mode 0))
+  :config (nyan-mode 1))
 #+end_src
 
-*** MoodModeLine (Disabled)
+*** Mood Mode Line (Disabled)
 
 Less laggy, less beauty.
 
-#+begin_src emacs-lisp :tangle no
+#+begin_src emacs-lisp 
 (use-package mood-line
   :disabled
   :config
