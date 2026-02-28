@@ -382,13 +382,6 @@ Only works with package.el.
   (native-comp-async-report-warnings-errors 'silent) ;; Don't show native comp errors
   (warning-minimum-level :error) ;; Only show errors in warnings buffer
 
-  ;; (mouse-wheel-progressive-speed nil) ;; Disable progressive speed when scrolling
-  ;; (scroll-conservatively 10) ;; Smooth scrolling
-  ;; (scroll-margin 8)
-
-  ;; (pixel-scroll-precision-mode t) ;; Precise pixel scrolling. i.e. smooth scrolling (GUI only)
-  ;; (pixel-scroll-precision-use-momentum nil)
-
   (indent-tabs-mode nil) ;; Only use spaces for indentation
   (tab-width 4)
   (sgml-basic-offset 4) ;; Set Html mode indentation to 4
@@ -1571,6 +1564,12 @@ Smooth animated scroll behavior.
   (good-scroll-render-rate 0.01)
   :config
   (good-scroll-mode 1))
+
+;; Full line-by-line scrolling configuration
+(setq scroll-step 1)                  ; Line-by-line when cursor exits window
+(setq scroll-conservatively 100)      ; Avoid recentering
+(setq scroll-margin 5)
+(setq scroll-preserve-screen-position t) ; Keep cursor visual position
 
 (global-set-key [next] #'good-scroll-up-full-screen)
 (global-set-key [prior] #'good-scroll-down-full-screen)
