@@ -1,2 +1,9 @@
 [flavor]
 dark = "tokyo-night"
+
+[icon]
+conds = [
+  { if = "dir & link", text = "" },
+  { if = "dir", text = "" },
+  { if = "!dir & link", text = "" },
+]
