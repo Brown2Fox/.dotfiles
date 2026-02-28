@@ -17,10 +17,6 @@ _k_friendly_name=Arch-Update Systray Applet
 CTRL+grave=,Ctrl+`,toggle_quick_terminal
 _k_friendly_name=btop++
 
-[com.mitchellh.ghostty]
-CTRL+grave=Ctrl+`,Ctrl+`,toggle_quick_terminal
-_k_friendly_name=Ghostty
-
 [kaccess]
 Toggle Screen Reader On and Off=Meta+Alt+S,Meta+Alt+S,Toggle Screen Reader On and Off
 _k_friendly_name=Accessibility
@@ -348,7 +344,7 @@ switch to previous activity=,,Switch to Previous Activity
 toggle do not disturb=,,Toggle do not disturb
 
 [services][org.kde.kcolorchooser.desktop]
-_launch=Meta+C
+_launch=Meta+Shift+C
 
 [services][org.kde.konsole.desktop]
 _launch=
@@ -356,16 +352,8 @@ _launch=
 [services][org.kde.plasma.emojier.desktop]
 _launch=Meta+Ctrl+Alt+Shift+Space\tMeta+.
 
-[services][org.kde.spectacle.desktop]
-CurrentMonitorScreenShot=
-OpenWithoutScreenshot=
-
 [services][systemsettings.desktop]
 _launch=Tools
-
-[token_ghostty_5328b71]
-CTRL+grave=,Ctrl+`,toggle_quick_terminal
-_k_friendly_name=token_ghostty_5328b71
 
 [transient]
 CTRL+grave=,Ctrl+`,toggle_quick_terminal
