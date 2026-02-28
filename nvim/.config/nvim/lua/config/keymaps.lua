@@ -1,11 +1,6 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
--- local k = vim.keycode
-
--- vim.g.mapleader = k '<F15>'
--- vim.g.maplocalleader = k '<F15>'
-
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -55,5 +50,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
-
 -- vim: ts=2 sts=2 sw=2 et
