@@ -141,14 +141,14 @@ UseSystemBell=true
 XftAntialias=true
 XftHintStyle=hintslight
 XftSubPixel=rgb
-fixed=Adwaita Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-font=Adwaita Sans,11,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
-menuFont=Adwaita Sans,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
-smallestReadableFont=Adwaita Sans,8,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
-toolBarFont=Adwaita Sans,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
+fixed=SF Mono,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
+font=SF Pro,11,-1,5,508,0,0,0,0,0,0,0,0,0,0,1,Medium
+menuFont=SF Pro,10,-1,5,508,0,0,0,0,0,0,0,0,0,0,1,Medium
+smallestReadableFont=SF Pro,8,-1,5,508,0,0,0,0,0,0,0,0,0,0,1,Medium
+toolBarFont=SF Pro,10,-1,5,508,0,0,0,0,0,0,0,0,0,0,1,Medium
 
 [Icons]
-Theme=breeze-dark
+Theme=breeze
 
 [KDE]
 AnimationDurationFactor=0.7071067811865475
@@ -172,7 +172,7 @@ Sort by=Name
 Sort directories first=true
 Sort hidden files last=false
 Sort reversed=false
-Speedbar Width=140
+Speedbar Width=164
 View Style=DetailTree
 
 [PreviewSettings]
@@ -206,7 +206,7 @@ Zoom=
 [WM]
 activeBackground=26,27,38
 activeBlend=215,218,224
-activeFont=Adwaita Sans,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
+activeFont=SF Pro,10,-1,5,508,0,0,0,0,0,0,0,0,0,0,1,Medium
 activeForeground=215,218,224
 inactiveBackground=26,27,38
 inactiveBlend=110,108,124
