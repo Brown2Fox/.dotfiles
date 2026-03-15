@@ -6,7 +6,8 @@ return  {
         { section = "header" },
         { icon = " ", key = "c", desc = "Config", indent = 2, padding = 2,
           action = function ()
-            require('telescope.builtin').find_files({ cwd = vim.fn.stdpath('config') });
+            require('yazi').yazi(nil, vim.fn.stdpath('config'))
+            -- require('telescope.builtin').find_files({ cwd = vim.fn.stdpath('config') });
           end
         },
         -- { section = "keys", gap = 1 },
