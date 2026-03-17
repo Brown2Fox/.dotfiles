@@ -1,9 +1,12 @@
 [flavor]
-dark = "tokyo-night"
+dark = "rose-pine-moon"
 
 [icon]
 conds = [
   { if = "dir & link", text = "" },
   { if = "dir", text = "" },
   { if = "!dir & link", text = "" },
+]
+prepend_dirs = [
+	{ name = ".dotfiles", text = "", fg = "#3bad7e"},
 ]
