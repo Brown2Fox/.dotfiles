@@ -93,7 +93,7 @@ KrohnkiteSpreadLayout=,none,Krohnkite: Spread Layout
 KrohnkiteStackedLayout=,none,Krohnkite: Stacked Layout
 KrohnkiteStairLayout=,none,Krohnkite: Stair Layout
 KrohnkiteTileLayout=,none,Krohnkite: Tile Layout
-KrohnkiteToggleFloat=none,none,Krohnkite: Toggle Float
+KrohnkiteToggleFloat=Meta+F,none,Krohnkite: Toggle Float
 KrohnkiteTreeColumnLayout=,none,Krohnkite: Three Column Layout
 KrohnkitegrowWidth=Meta+Ctrl+L,none,Krohnkite: Grow Width
 KrohnkitetoggleDock=,none,Krohnkite: Toggle Dock
@@ -396,7 +396,7 @@ swap_window_left=Meta+Ctrl+Alt+Left,Meta+Ctrl+Alt+Left,Swap Window Left
 swap_window_right=Meta+Ctrl+Alt+Right,Meta+Ctrl+Alt+Right,Swap Window Right
 swap_window_up=Meta+Ctrl+Alt+Up,Meta+Ctrl+Alt+Up,Swap Window Up
 toggle_autotile=Meta+Shift+T,Meta+Shift+T,Toggle Autotile
-toggle_window_float=Meta+F,Meta+F,Toggle Window Floating
+toggle_window_float=none,Meta+F,Toggle Window Floating
 
 [services][NvideTerm.desktop]
 _launch=Meta+T
