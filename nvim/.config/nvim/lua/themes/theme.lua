@@ -1,8 +1,8 @@
 return {
 	{
     "folke/tokyonight.nvim",
-		-- enabled = false,
 		priority = 1000,
+    enabled = false,
 		config = function()
 			---@diagnostic disable-next-line: missing-fields
 			require("tokyonight").setup({
@@ -17,6 +17,20 @@ return {
 			vim.cmd.colorscheme("tokyonight-night")
 		end,
 	},
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    config = function()
+      require("rose-pine").setup({
+        styles = {
+          bold = true,
+          italic = false,
+          transparency = true,
+        }
+      })
+      vim.cmd("colorscheme rose-pine-moon")
+    end
+  },
 	{
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
