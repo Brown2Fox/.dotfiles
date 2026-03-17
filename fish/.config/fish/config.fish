@@ -7,8 +7,13 @@ set -g fish_key_bindings fish_vi_key_bindings
 
 set FZF_DEFAULT_OPTS "--layout=reverse --border=bold --border=rounded --margin=3% --color=dark"
 
-set EDITOR "nvim"
-set VISUAL "neovide"
+set -gx EDITOR "nvim"
+set -gx SUDO_EDITOR "nvim"
+set -gx VISUAL "nvim"
+
+set -g fish_tmux_autostart false
+set -g fish_tmux_autoquit false
+set -gx fish_tmux_default_session_name "default"
 
 alias cls "clear"
 alias nvide "neovide"
