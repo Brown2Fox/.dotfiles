@@ -1,5 +1,5 @@
-theme = tokyo-night
-background-opacity = 0.98
+theme = Rose Pine Moon
+background-opacity = 0.90
 background-blur = true
 # Cursor Shaders: https://github.com/sahaj-b/ghostty-cursor-shaders
 custom-shader = shaders/cursor_warp.glsl
