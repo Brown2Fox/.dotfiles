@@ -3,6 +3,8 @@
 ;; Make startup faster by reducing the frequency of garbage collection. This will be set back when startup finishes.
 ;; We also increase Read Process Output Max so Emacs can read more data.
 
+(setq package-enable-at-startup nil)
+
 ;; Set garbage collector (from doom emacs)
 ;; About 0.02 faster
 (setq gc-cons-threshold (* 1024 1024 128)  ;; 128mb

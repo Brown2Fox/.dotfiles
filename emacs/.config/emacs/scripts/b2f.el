@@ -1,10 +1,20 @@
 ;; -*- lexical-binding: t; -*-
 ;; Kill other buffers
-(defun kill-other-buffers ()
+(defun b2f/kill-other-buffers ()
   "Kill all other buffers."
   (interactive)
   (mapc #'(lambda (buf) (if (not (equal buf (current-buffer))) (kill-buffer buf))) (buffer-list))
 )
+
+(defun b2f/kill-current-buffer ()
+  "Kill current buffer."
+  (interactive)
+  (mapc #'(lambda (buf) (if (equal buf (current-buffer)) (kill-buffer buf))) (buffer-list))
+)
+
+(defun b2f/pulse-on-yank (orig-fn beg end &rest args)
+  (pulse-momentary-highlight-region beg end)
+  (apply orig-fn beg end args))
 
 (defun pp-path-env-var ()
   "Path Pretty Print: Display current PATH environment variable in a formatted temporary buffer."

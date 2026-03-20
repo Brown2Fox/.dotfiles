@@ -58,4 +58,56 @@
                          marked-files))))
 )
 
-(provide 'dired-b2f)
+(defun b2f/dired-refresh-preview ()
+  (when dired-preview-global-mode
+    (dired-preview-mode -1)
+    (dired-preview-mode 1)))
+
+(defun b2f/dired-enter-directory ()
+  "Enter directory under cursor, do nothing if it's a file."
+  (interactive)
+  (let ((file (dired-get-file-for-visit)))
+    (when (file-directory-p file)
+      (dired-find-file)
+      (b2f/dired-refresh-preview))))
+
+(defun b2f/dired-up-directory ()
+  (interactive)
+  (dired-up-directory)
+  (b2f/dired-refresh-preview))
+
+(defun b2f/dired-create-file-or-dir (name)
+  "Create file or directory in current dired directory.
+If NAME ends with /, create a directory; otherwise create a file."
+  (interactive "sCreate (end with / for dir): ")
+  (let ((path (expand-file-name name (dired-current-directory))))
+    (if (string-suffix-p "/" name)
+        (make-directory path t)
+      (unless (file-exists-p path)
+        (make-empty-file path t)))
+    (revert-buffer)
+    (dired-goto-file (if (string-suffix-p "/" name)
+                         (directory-file-name path)
+                       path))))
+
+(defun b2f/dired-jump ()
+    "Open Dired inplace"
+    (interactive)
+    (dired-jump)
+  )
+
+(defun b2f/dired-jump-v ()
+    "Open Dired in new vertical split"
+    (interactive)
+    (evil-window-vsplit)
+    (dired-jump)
+  )
+
+(defun b2f/dired-jump-h ()
+    "Open Dired in new horizontal split"
+    (interactive)
+    (evil-window-split)
+    (dired-jump)
+  )
+
+(provide 'b2f-dired)
