@@ -9,3 +9,5 @@ window-position-y = 250
 window-position-x = 250
 # keybind = global:ctrl+grave_accent=toggle_quick_terminal
 quick-terminal-size = 60%, 100%
+font-family = Lilex Nerd Font Mono Medium
+font-size = 12
