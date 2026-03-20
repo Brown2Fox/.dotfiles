@@ -16,6 +16,8 @@ config.color_scheme = 'rose-pine-moon'
 
 config.enable_tab_bar = true
 config.use_fancy_tab_bar  = false
+config.window_background_opacity = 0.9
+-- config.kde_window_background_blur = true -- nightly builds only for now
 
 local modal = wezterm.plugin.require("https://github.com/MLFlexer/modal.wezterm")
 modal.apply_to_config(config)
