@@ -2,7 +2,7 @@ return {
     "X3eRo0/dired.nvim",
     event = 'VimEnter',
     dependencies = { 
-      "MunifTanjim/nui.nvim" 
+      "MunifTanjim/nui.nvim",
     },
     config = function()
       -- Set up the 'dired' plugin with custom options
@@ -17,9 +17,9 @@ return {
 
           -- Define keybindings for various 'dired' actions
           keybinds = {
-              dired_enter = "<CR>",
+              dired_enter = "l",
               dired_back = "-",
-              dired_up = "_",
+              dired_up = "h",
               dired_rename = "R",
               -- ... (add more keybindings as needed)
               dired_quit = "q",

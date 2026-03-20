@@ -1,34 +1,38 @@
 return {
-	{
-    "folke/tokyonight.nvim",
-		priority = 1000,
-    enabled = false,
-		config = function()
-			---@diagnostic disable-next-line: missing-fields
-			require("tokyonight").setup({
-				transparent = not vim.g.neovide,
-				styles = {
-					comments = { italic = false }, -- Disable italics in comments
-					sidebars = "transparent",
-					floats = "transparent",
-				},
-			})
+	--{
+  --  "folke/tokyonight.nvim",
+	--	priority = 1000,
+  --  enabled = false,
+	--	config = function()
+	--		---@diagnostic disable-next-line: missing-fields
+	--		require("tokyonight").setup({
+	--			transparent = not vim.g.neovide,
+	--			styles = {
+	--				comments = { italic = false }, -- Disable italics in comments
+	--				sidebars = "transparent",
+	--				floats = "transparent",
+	--			},
+	--		})
 
-			vim.cmd.colorscheme("tokyonight-night")
-		end,
-	},
+	--		vim.cmd.colorscheme("tokyonight-night")
+	--	end,
+	--},
   {
     "rose-pine/neovim",
+		--priority = 1000,
     name = "rose-pine",
     config = function()
       require("rose-pine").setup({
+        enable = {
+          terminal = true,
+        },
         styles = {
           bold = true,
           italic = false,
-          transparency = true,
+          transparency = not vim.g.neovide,
         }
       })
-      vim.cmd("colorscheme rose-pine-moon")
+      vim.cmd.colorscheme("rose-pine-moon")
     end
   },
 	{
