@@ -1,0 +1,5 @@
+# Config relating to the Lazygit UI
+gui:
+  # Window border style.
+  # One of 'rounded' (default) | 'single' | 'double' | 'hidden' | 'bold'
+  border: single
